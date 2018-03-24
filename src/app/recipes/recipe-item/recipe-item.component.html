@@ -1,0 +1,16 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{recipe.title}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{recipe.img}}" />
+  <mat-card-content class="description">{{recipe.description}}</mat-card-content>
+  <mat-card-actions>
+    <button color="primary" [routerLink]="['/recipes', recipe.id]" mat-button>Read more</button>
+    <mat-icon class="icons edit-icon" color="primary">
+      <i class="material-icons">edit</i>
+    </mat-icon>
+    <mat-icon class="icons delete-icon" (click)="deleteItem(recipe.id)" color="red">
+      <i class="material-icons">delete</i>
+    </mat-icon>
+  </mat-card-actions>
+</mat-card>

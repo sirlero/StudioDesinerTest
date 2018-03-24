@@ -1,0 +1,22 @@
+/deep/ app-recipe-item{
+  .example-card{
+    max-width: 250px;
+    display: inline-block;
+    margin: 20px;
+  }
+  .mat-card-image {
+    height: 190px;
+  }
+  .mat-card-title {
+    font-size: 20px!important;
+    font-weight: 500;
+  }
+  .icons {
+    padding: 0 14px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .delete-icon{
+    color: red;
+  }
+}

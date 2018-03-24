@@ -1,0 +1,15 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" align="end" mode="side">
+    <div class="search-input-container">
+      <input [(ngModel)]="searchText" placeholder="search">
+      <div class="clear-search" (click)="deleteSearch()"><i class="material-icons">cancel</i></div>
+    </div>
+    <ul>
+      <li class="list-item" *ngFor="let c of mealTypes| filter : searchText">
+        <img src="{{c.imageUrl}}" alt="">
+        <span>{{c.displayName}}</span>
+      </li>
+    </ul>
+  </mat-drawer>
+
+</mat-drawer-container>

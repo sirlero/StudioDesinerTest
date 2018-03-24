@@ -1,0 +1,22 @@
+<div class="title">Add recipe</div>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+        <input matInput [(ngModel)]="addItem.title" name="title" placeholder="Add title">
+    </mat-form-field>
+    <mat-select class="example-full-width"
+                name="category" [(ngModel)]="addItem.category"
+                placeholder="Select category">
+        <mat-option *ngFor="let category of categories" [value]="category">
+            {{ category }}
+        </mat-option>
+    </mat-select>
+    <mat-form-field class="example-full-width">
+        <textarea matInput [(ngModel)]="addItem.description"
+                  name="description" placeholder="Add description"></textarea>
+    </mat-form-field>
+    <div class="example-full-width">
+        <input [(ngModel)]="addItem.img" type="file" name="pic" accept="image/*">
+    </div>
+    <button mat-button [mat-dialog-close]="addItem" type="submit" color="primary">Add</button>
+    <button mat-button [mat-dialog-close]="false" color="primary">Cancel</button>
+</form>
